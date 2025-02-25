@@ -14,6 +14,7 @@ import {
 import ButtonSocialMediaGoogle from '../../components/ButtonSocialMediaGoogle/ButtonSocialMediaGoogle';
 import ButtonSocialMediaFacebook from '../../components/ButtonSocialMediaFacebook/ButtonSocialMediaFacebook';
 import Input from '../../components/Input';
+import {Button} from '../../components/Button';
 
 const Login: React.FC = () => {
   return (
@@ -30,8 +31,21 @@ const Login: React.FC = () => {
         </ContentHeader>
 
         <ContentBody>
-          <Input LeftIcon iconName="Mail"></Input>
-          <Input RightIcon iconName="Eye"></Input>
+          <Input
+            LeftIcon
+            iconName="Mail"
+            iconColor="gray"
+            iconSize={25}
+            placeholder="Digite seu email"
+          />
+          <Input
+            LeftIcon
+            iconName="Lock"
+            iconColor="gray"
+            iconSize={25}
+            placeholder="Digite sua senha"
+          />
+          <Button title="Entrar" onPress={() => {}} />
         </ContentBody>
 
         <ContentFooter />
