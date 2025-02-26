@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   background-color: lightgray;
   width: 100%;
-  height: 50px;
+  height: 60px;
   padding: 0 ${RFValue(12)}px;
   justify-content: center;
   border-radius: 8px;
@@ -14,10 +14,11 @@ export const Container = styled.View`
 `;
 
 export const InputContainer = styled.TextInput`
+  flex: 1;
+  font-family: monospace;
   width: 100%;
-  height: 45px;
+  height: 50px;
   border: 0;
   border-radius: 8px;
-  font-size: 15px;
-  flex: 1;
+  font-size: 16px;
 `;

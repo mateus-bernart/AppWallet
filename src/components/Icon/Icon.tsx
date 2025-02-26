@@ -1,5 +1,5 @@
 import {icons, LucideProps} from 'lucide-react-native';
-import {forwardRef, ReactElement} from 'react';
+import {ReactElement} from 'react';
 
 type IconName = keyof typeof icons;
 

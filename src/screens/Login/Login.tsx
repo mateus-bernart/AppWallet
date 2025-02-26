@@ -36,16 +36,25 @@ const Login: React.FC = () => {
             iconName="Mail"
             iconColor="gray"
             iconSize={25}
-            placeholder="Digite seu email"
+            secureTextEntry={false}
+            keyboardType="email-address"
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder="Your E-mail"
           />
           <Input
             LeftIcon
+            RightIcon
             iconName="Lock"
             iconColor="gray"
             iconSize={25}
-            placeholder="Digite sua senha"
+            secureTextEntry
+            keyboardType="default"
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder="Your password"
           />
-          <Button title="Entrar" onPress={() => {}} />
+          <Button title="Entrar" onPress={() => {}} variant="primary" />
         </ContentBody>
 
         <ContentFooter />

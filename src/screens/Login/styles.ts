@@ -7,17 +7,16 @@ export const Container = styled.View`
 
 export const ContentHeader = styled.View`
   align-items: center;
-  justify-content: center;
-  padding: ${RFValue(20)}px;
 `;
 
 export const ContentBody = styled.View``;
+
 export const ContentFooter = styled.View``;
 
 export const ViewButton = styled.View`
-  display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 5;
+  margin-bottom: ${RFValue(10)}px;
 `;
 
 export const Title = styled.Text`
