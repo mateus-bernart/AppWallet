@@ -1,13 +1,18 @@
-import {SafeAreaView} from 'react-native';
+import {KeyboardAvoidingView, SafeAreaView} from 'react-native';
 import React from 'react';
 
 import {
+  ButtonSignUp,
   Container,
+  ContainerBody,
   ContentBody,
   ContentFooter,
+  ContentForgotPassword,
   ContentHeader,
   Description,
   Title,
+  TitleButtonSignUp,
+  TitleButtonSignUp2,
   ViewButton,
 } from './styles';
 
@@ -19,46 +24,72 @@ import {Button} from '../../components/Button';
 const Login: React.FC = () => {
   return (
     <SafeAreaView>
-      <Container>
-        <ContentHeader>
-          <Title>Welcome to {'\n'} App Wallet</Title>
-          <Description>Sign up with</Description>
+      <KeyboardAvoidingView behavior="position" enabled>
+        <Container>
+          <ContainerBody>
+            <ContentHeader>
+              <Title>Welcome to {'\n'} App Wallet</Title>
+              <Description>Sign up with</Description>
 
-          <ViewButton>
-            <ButtonSocialMediaGoogle title="Google" />
-            <ButtonSocialMediaFacebook title="Facebook" />
-          </ViewButton>
-        </ContentHeader>
+              <ViewButton>
+                <ButtonSocialMediaGoogle title="Google" />
+                <ButtonSocialMediaFacebook title="Facebook" />
+              </ViewButton>
+            </ContentHeader>
 
-        <ContentBody>
-          <Input
-            LeftIcon
-            iconName="Mail"
-            iconColor="gray"
-            iconSize={25}
-            secureTextEntry={false}
-            keyboardType="email-address"
-            autoCorrect={false}
-            autoCapitalize="none"
-            placeholder="Your E-mail"
-          />
-          <Input
-            LeftIcon
-            RightIcon
-            iconName="Lock"
-            iconColor="gray"
-            iconSize={25}
-            secureTextEntry
-            keyboardType="default"
-            autoCorrect={false}
-            autoCapitalize="none"
-            placeholder="Your password"
-          />
-          <Button title="Entrar" onPress={() => {}} variant="primary" />
-        </ContentBody>
+            <ContentBody>
+              <Input
+                LeftIcon
+                iconName="Mail"
+                iconColor="gray"
+                iconSize={25}
+                secureTextEntry={false}
+                keyboardType="email-address"
+                autoCorrect={false}
+                autoCapitalize="none"
+                placeholder="Your E-mail"
+              />
+              <Input
+                LeftIcon
+                RightIcon
+                iconName="Lock"
+                iconColor="gray"
+                iconSize={25}
+                secureTextEntry
+                keyboardType="default"
+                autoCorrect={false}
+                autoCapitalize="none"
+                placeholder="Your password"
+              />
 
-        <ContentFooter />
-      </Container>
+              <ContentForgotPassword>
+                <Button
+                  title="Forgot your password?"
+                  onPress={() => {}}
+                  variant="transparent"
+                  size={16}
+                  style={{
+                    alignItems: 'flex-start',
+                  }}></Button>
+              </ContentForgotPassword>
+
+              <Button
+                title="Enter"
+                onPress={() => {}}
+                variant="primary"
+                size={25}
+              />
+            </ContentBody>
+          </ContainerBody>
+
+          <ContentFooter>
+            <ButtonSignUp onPress={() => {}}>
+              <TitleButtonSignUp>Don't have an account?</TitleButtonSignUp>
+              <TitleButtonSignUp2>Sign Up</TitleButtonSignUp2>
+            </ButtonSignUp>
+          </ContentFooter>
+        </Container>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };

@@ -88,10 +88,35 @@ const buttonBlack: ButtonVariant = {
       backgroundColor: 'gray',
     },
     title: {
-      color: 'white',
+      color: 'yellow',
     },
     icon: {
-      color: 'white',
+      color: 'yellow',
+    },
+  },
+};
+
+const buttonTransparent: ButtonVariant = {
+  enabled: {
+    button: {
+      backgroundColor: 'transparent',
+    },
+    title: {
+      color: 'gray',
+    },
+    icon: {
+      color: 'gray',
+    },
+  },
+  disabled: {
+    button: {
+      backgroundColor: 'transparent',
+    },
+    title: {
+      color: 'gray',
+    },
+    icon: {
+      color: 'gray',
     },
   },
 };
@@ -100,4 +125,5 @@ export const variants = {
   primary: buttonPrimary,
   outline: buttonOutline,
   black: buttonBlack,
+  transparent: buttonTransparent,
 };
