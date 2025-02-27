@@ -16,25 +16,26 @@ import {
   ViewButton,
 } from './styles';
 
-import ButtonSocialMediaGoogle from '../../components/ButtonSocialMediaGoogle/ButtonSocialMediaGoogle';
-import ButtonSocialMediaFacebook from '../../components/ButtonSocialMediaFacebook/ButtonSocialMediaFacebook';
-import Input from '../../components/Input';
-import {Button} from '../../components/Button';
+import ButtonSocialMediaGoogle from '../../../components/ButtonSocialMediaGoogle/ButtonSocialMediaGoogle';
+import ButtonSocialMediaFacebook from '../../../components/ButtonSocialMediaFacebook/ButtonSocialMediaFacebook';
+import Input from '../../../components/Input';
+import {Button} from '../../../components/Button';
+import {useNavigation} from '@react-navigation/native';
 
-const Login: React.FC = () => {
+export const Register: React.FC = () => {
+  const navigation = useNavigation();
+
+  const handleCadastro = () => {
+    navigation.navigate('Register');
+  };
+
   return (
     <SafeAreaView>
       <KeyboardAvoidingView behavior="position" enabled>
         <Container>
           <ContainerBody>
             <ContentHeader>
-              <Title>Welcome to {'\n'} App Wallet</Title>
-              <Description>Sign up with</Description>
-
-              <ViewButton>
-                <ButtonSocialMediaGoogle title="Google" />
-                <ButtonSocialMediaFacebook title="Facebook" />
-              </ViewButton>
+              <Title>Register</Title>
             </ContentHeader>
 
             <ContentBody>
@@ -61,17 +62,18 @@ const Login: React.FC = () => {
                 autoCapitalize="none"
                 placeholder="Your password"
               />
-
-              <ContentForgotPassword>
-                <Button
-                  title="Forgot your password?"
-                  onPress={() => {}}
-                  variant="transparent"
-                  size={16}
-                  style={{
-                    alignItems: 'flex-start',
-                  }}></Button>
-              </ContentForgotPassword>
+              <Input
+                LeftIcon
+                RightIcon
+                iconName="Lock"
+                iconColor="gray"
+                iconSize={25}
+                secureTextEntry
+                keyboardType="default"
+                autoCorrect={false}
+                autoCapitalize="none"
+                placeholder="Repeat Your password"
+              />
 
               <Button
                 title="Enter"
@@ -81,17 +83,8 @@ const Login: React.FC = () => {
               />
             </ContentBody>
           </ContainerBody>
-
-          <ContentFooter>
-            <ButtonSignUp onPress={() => {}}>
-              <TitleButtonSignUp>Don't have an account?</TitleButtonSignUp>
-              <TitleButtonSignUp2>Sign Up</TitleButtonSignUp2>
-            </ButtonSignUp>
-          </ContentFooter>
         </Container>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
-
-export default Login;

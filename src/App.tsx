@@ -1,19 +1,19 @@
 import React from 'react';
-import {ThemeProvider} from 'styled-components/native';
-
 import {StatusBar, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {Routes} from './routes';
 
-import COLORS from '../src/styles/theme';
-import Login from './screens/Login/Login';
+// import {ThemeProvider} from 'styled-components/native';
+// import COLORS from '../src/styles/theme';
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={COLORS}>
+    <NavigationContainer>
       <StatusBar barStyle={'light-content'} />
-      <View>
-        <Login />
+      <View style={{flex: 1}}>
+        <Routes />
       </View>
-    </ThemeProvider>
+    </NavigationContainer>
   );
 };
 

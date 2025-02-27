@@ -2,7 +2,6 @@
   "name": "wallet",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -12,6 +11,8 @@
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^7.2.0",
+    "@react-navigation/elements": "^2.2.5",
+    "@react-navigation/native": "^7.0.14",
     "@react-navigation/native-stack": "^7.2.0",
     "lucide-react-native": "^0.476.0",
     "react": "19.0.0",
