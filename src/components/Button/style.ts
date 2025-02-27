@@ -14,6 +14,7 @@ export const Content = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: ${RFValue(10)}px;
 `;
 
 export const Title = styled.Text`

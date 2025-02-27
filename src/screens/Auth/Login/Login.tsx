@@ -1,4 +1,4 @@
-import {KeyboardAvoidingView, SafeAreaView} from 'react-native';
+import {KeyboardAvoidingView, SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
 
 import {
@@ -25,17 +25,21 @@ import {useNavigation} from '@react-navigation/native';
 export const Login: React.FC = () => {
   const navigation = useNavigation();
 
-  const handleCadastro = () => {
+  const handleRegister = () => {
     navigation.navigate('Register');
+  };
+
+  const handleForgotPassword = () => {
+    navigation.navigate('RecoverPassword');
   };
 
   return (
     <SafeAreaView>
-      <KeyboardAvoidingView behavior="position" enabled>
+      <ScrollView showsHorizontalScrollIndicator={false}>
         <Container>
           <ContainerBody>
             <ContentHeader>
-              <Title>Welcome to {'\n'} App Wallet</Title>
+              <Title>Welcome back to {'\n'} App Wallet</Title>
               <Description>Sign up with</Description>
 
               <ViewButton>
@@ -54,7 +58,7 @@ export const Login: React.FC = () => {
                 keyboardType="email-address"
                 autoCorrect={false}
                 autoCapitalize="none"
-                placeholder="Your E-mail"
+                placeholder="E-Mail"
               />
               <Input
                 LeftIcon
@@ -66,13 +70,13 @@ export const Login: React.FC = () => {
                 keyboardType="default"
                 autoCorrect={false}
                 autoCapitalize="none"
-                placeholder="Your password"
+                placeholder="Password"
               />
 
               <ContentForgotPassword>
                 <Button
                   title="Forgot your password?"
-                  onPress={() => {}}
+                  onPress={handleForgotPassword}
                   variant="transparent"
                   size={16}
                   style={{
@@ -90,13 +94,13 @@ export const Login: React.FC = () => {
           </ContainerBody>
 
           <ContentFooter>
-            <ButtonSignUp onPress={handleCadastro}>
+            <ButtonSignUp onPress={handleRegister}>
               <TitleButtonSignUp>Don't have an account?</TitleButtonSignUp>
               <TitleButtonSignUp2>Sign Up</TitleButtonSignUp2>
             </ButtonSignUp>
           </ContentFooter>
         </Container>
-      </KeyboardAvoidingView>
+      </ScrollView>
     </SafeAreaView>
   );
 };

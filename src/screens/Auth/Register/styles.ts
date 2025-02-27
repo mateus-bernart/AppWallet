@@ -42,8 +42,9 @@ export const Description = styled.Text`
 
 export const ContentFooter = styled.View`
   width: 100%;
-  align-items: flex;
+  align-items: center;
   justify-content: center;
+  margin-top: ${RFValue(20)}px;
 `;
 
 export const ButtonSignUp = styled(Pressable)`
@@ -66,5 +67,3 @@ export const TitleButtonSignUp2 = styled.Text`
   font-weight: 800;
   margin-left: ${RFValue(10)}px;
 `;
-
-export const ContentForgotPassword = styled.View``;

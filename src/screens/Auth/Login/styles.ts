@@ -41,6 +41,7 @@ export const Description = styled.Text`
 `;
 
 export const ContentFooter = styled.View`
+  margin-bottom: ${RFValue(20)}px;
   width: 100%;
   align-items: flex;
   justify-content: center;
